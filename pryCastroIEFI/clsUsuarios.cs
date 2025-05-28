@@ -27,8 +27,6 @@ namespace pryCastroIEFI
             DataTable dt = conexion.EjecutarConsulta(comando);
             return Convert.ToInt32(dt.Rows[0][0]) > 0;
 
-
-
         }
 
         
@@ -91,7 +89,7 @@ namespace pryCastroIEFI
             {
                 string query = "DELETE FROM Usuarios WHERE Usuario = @nombreUsuario";//Arma una sentencia SQL para eliminar un nombre específico
                 SqlCommand comando = new SqlCommand(query);
-                comando.Parameters.AddWithValue("@Usuario", nombreUsuario);//usa parámetros para prevenir inyecciones SQL
+                comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);//usa parámetros para prevenir inyecciones SQL
 
                 conexion.EjecutarComando(comando);//elimina el registro
                 MessageBox.Show("Usuario eliminado correctamente.");
@@ -102,7 +100,7 @@ namespace pryCastroIEFI
             }
         }
 
-        public void ModificarProducto(clsUsuarios usuario )
+        public void ModificarUsuario(clsUsuarios usuario )
         {
             try
             {
@@ -136,6 +134,6 @@ namespace pryCastroIEFI
             SqlCommand comando = new SqlCommand(query);
             return conexion.EjecutarConsulta(comando);
         }
-
+       
     }
 }

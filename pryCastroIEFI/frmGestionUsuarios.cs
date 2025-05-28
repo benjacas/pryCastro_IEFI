@@ -16,5 +16,29 @@ namespace pryCastroIEFI
         {
             InitializeComponent();
         }
+
+        private void agregarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarUsuarios AgregarUsuarios = new frmAgregarUsuarios();
+            AgregarUsuarios.ShowDialog();
+        }
+
+        private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModificarUsuarios modificarUsuarios = new frmModificarUsuarios();
+            modificarUsuarios.ShowDialog();
+        }
+
+        private void eliminarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEliminarUsuarios eliminarUsuarios = new frmEliminarUsuarios();
+            eliminarUsuarios.ShowDialog();
+        }
+
+        private void verUsuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarUsuarios mostrarUsuarios = new frmMostrarUsuarios();
+            mostrarUsuarios.ShowDialog();
+        }
     }
 }

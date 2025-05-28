@@ -12,34 +12,21 @@ namespace pryCastroIEFI
 {
     public partial class frmMenu : Form
     {
-        clsAuditoria auditoria=new clsAuditoria();
-
         public frmMenu()
         {
             InitializeComponent();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAuditoria v = new frmAuditoria();
-            v.ShowDialog();
+            frmAuditoria auditoria = new frmAuditoria();
+            auditoria.ShowDialog();
         }
 
-        private void frmMenu_Load(object sender, EventArgs e)
+        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            auditoria.CerrarSesion();
-
-            Environment.Exit(0);
+            frmGestionUsuarios usuarios = new frmGestionUsuarios();
+            usuarios.ShowDialog();
         }
     }
 }
