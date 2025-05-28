@@ -38,8 +38,9 @@ namespace pryGestionInventario2
             {
                 if (Usuarios.VerificarLogin(usuario, contraseña))
                 {
-                    Usuarios.rol(usuario, contraseña);
-                    Auditoria.IniciarSesion(usuario);
+                    Usuarios.rol(usuario, contraseña);//acá se buscar que rol tiene, falta terminar
+
+                    
 
                     timerInicio.Start();
                     MessageBox.Show("Bienvenido " + usuario);

@@ -11,6 +11,7 @@ namespace pryCastroIEFI
     internal class clsAuditoria
     {
         public DateTime inicioSesion;
+        public DateTime finSesion;
         public string usuarioActual ;
 
         clsConexionBD conexion = new clsConexionBD();
@@ -32,7 +33,7 @@ namespace pryCastroIEFI
 
         public void CerrarSesion()
         {
-            DateTime finSesion = DateTime.Now;
+            finSesion = DateTime.Now;
             TimeSpan duracion = finSesion - inicioSesion;
 
             string query = "UPDATE Auditoria SET FechaHoraFin = @fin, DuracionSegundos = @duracion " +
@@ -44,6 +45,9 @@ namespace pryCastroIEFI
             comando.Parameters.AddWithValue("@inicio", inicioSesion);
 
             conexion.EjecutarComando(comando);
+
+            MessageBox.Show("inicioSesion: " + inicioSesion.ToString());
+            MessageBox.Show("finSesion: " + finSesion.ToString());
         }
 
         public void MostrarGrilla(DataGridView dgv)

@@ -33,12 +33,15 @@
             administraciónToolStripMenuItem = new ToolStripMenuItem();
             gestionDeUsuariosToolStripMenuItem = new ToolStripMenuItem();
             auditoriaToolStripMenuItem = new ToolStripMenuItem();
+            miPerfilToolStripMenuItem = new ToolStripMenuItem();
+            cerrarSesionToolStripMenuItem = new ToolStripMenuItem();
+            cambiarContraseñaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tareasToolStripMenuItem, administraciónToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tareasToolStripMenuItem, administraciónToolStripMenuItem, miPerfilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -61,16 +64,36 @@
             // gestionDeUsuariosToolStripMenuItem
             // 
             gestionDeUsuariosToolStripMenuItem.Name = "gestionDeUsuariosToolStripMenuItem";
-            gestionDeUsuariosToolStripMenuItem.Size = new Size(180, 22);
+            gestionDeUsuariosToolStripMenuItem.Size = new Size(178, 22);
             gestionDeUsuariosToolStripMenuItem.Text = "Gestion de Usuarios";
             gestionDeUsuariosToolStripMenuItem.Click += gestionDeUsuariosToolStripMenuItem_Click;
             // 
             // auditoriaToolStripMenuItem
             // 
             auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            auditoriaToolStripMenuItem.Size = new Size(180, 22);
+            auditoriaToolStripMenuItem.Size = new Size(178, 22);
             auditoriaToolStripMenuItem.Text = "Auditoria";
             auditoriaToolStripMenuItem.Click += auditoriaToolStripMenuItem_Click;
+            // 
+            // miPerfilToolStripMenuItem
+            // 
+            miPerfilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cerrarSesionToolStripMenuItem, cambiarContraseñaToolStripMenuItem });
+            miPerfilToolStripMenuItem.Name = "miPerfilToolStripMenuItem";
+            miPerfilToolStripMenuItem.Size = new Size(63, 20);
+            miPerfilToolStripMenuItem.Text = "Mi Perfil";
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            cerrarSesionToolStripMenuItem.Size = new Size(182, 22);
+            cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            cerrarSesionToolStripMenuItem.Click += cerrarSesionToolStripMenuItem_Click;
+            // 
+            // cambiarContraseñaToolStripMenuItem
+            // 
+            cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
+            cambiarContraseñaToolStripMenuItem.Size = new Size(182, 22);
+            cambiarContraseñaToolStripMenuItem.Text = "Cambiar Contraseña";
             // 
             // frmMenu
             // 
@@ -82,6 +105,7 @@
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
+            Load += frmMenu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -95,5 +119,8 @@
         private ToolStripMenuItem administraciónToolStripMenuItem;
         private ToolStripMenuItem gestionDeUsuariosToolStripMenuItem;
         private ToolStripMenuItem auditoriaToolStripMenuItem;
+        private ToolStripMenuItem miPerfilToolStripMenuItem;
+        private ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
     }
 }

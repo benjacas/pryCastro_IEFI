@@ -16,7 +16,8 @@ namespace pryCastroIEFI
         {
             InitializeComponent();
         }
-
+        clsAuditoria auditoria = new clsAuditoria();
+        frmGestionUsuarios usuarios = new frmGestionUsuarios();
         private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAuditoria auditoria = new frmAuditoria();
@@ -25,8 +26,23 @@ namespace pryCastroIEFI
 
         private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGestionUsuarios usuarios = new frmGestionUsuarios();
+            
             usuarios.ShowDialog();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+            MessageBox.Show("Sesion Cerrada");
+            auditoria.CerrarSesion();
+
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            
+            //FALTA TERMINARauditoria.IniciarSesion();
         }
     }
 }
