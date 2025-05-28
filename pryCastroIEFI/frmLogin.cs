@@ -40,12 +40,12 @@ namespace pryGestionInventario2
                 {
                     Usuarios.rol(usuario, contraseña);//acá se buscar que rol tiene, falta terminar
 
-                    
+                    Auditoria.IniciarSesion(usuario);
 
                     timerInicio.Start();
                     MessageBox.Show("Bienvenido " + usuario);
                     
-                    frmMenu v = new frmMenu();
+                    frmMenu v = new frmMenu(Auditoria);
                     
                     v.ShowDialog();
                     

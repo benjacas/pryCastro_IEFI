@@ -12,12 +12,17 @@ namespace pryCastroIEFI
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        private clsAuditoria Auditoria;
+        
+        public frmMenu(clsAuditoria sesionCompartida)
         {
             InitializeComponent();
+            Auditoria = sesionCompartida;
         }
-        clsAuditoria auditoria = new clsAuditoria();
+        
         frmGestionUsuarios usuarios = new frmGestionUsuarios();
+        
+
         private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAuditoria auditoria = new frmAuditoria();
@@ -32,17 +37,18 @@ namespace pryCastroIEFI
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
             MessageBox.Show("Sesion Cerrada");
-            auditoria.CerrarSesion();
 
+            
+            Auditoria.CerrarSesion();
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            
-            //FALTA TERMINARauditoria.IniciarSesion();
+            //string usuario= auditoria.usuarioActual;
+            //auditoria.IniciarSesion(usuario);
         }
     }
 }

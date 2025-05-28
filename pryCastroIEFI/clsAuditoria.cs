@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace pryCastroIEFI
 {
-    internal class clsAuditoria
+    public class clsAuditoria
     {
-        public DateTime inicioSesion;
-        public DateTime finSesion;
+        DateTime inicioSesion { get; set; }
+        public DateTime finSesion { get; set; }
         public string usuarioActual ;
 
         clsConexionBD conexion = new clsConexionBD();
 
         public void IniciarSesion(string usuario)
         {
-         
+            
 
             usuarioActual = usuario;
             inicioSesion = DateTime.Now;
