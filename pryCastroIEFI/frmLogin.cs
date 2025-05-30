@@ -31,21 +31,24 @@ namespace pryGestionInventario2
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
+   
+            string usuarioActual = txtUsuario.Text;
+            string contraseñaActual = txtContraseña.Text;
+            Usuarios.Usuario = usuarioActual;
+            Usuarios.Clave = contraseñaActual;
 
             try
             {
-                if (Usuarios.VerificarLogin(usuario, contraseña))
+                if (Usuarios.VerificarLogin(usuarioActual, contraseñaActual))
                 {
-                    Usuarios.rol(usuario, contraseña);//acá se buscar que rol tiene, falta terminar
+                    //Usuarios.ObtenerRol(usuario, contraseña);//acá se buscar que rol tiene, falta terminar
 
-                    Auditoria.IniciarSesion(usuario);
+                    Auditoria.IniciarSesion(usuarioActual);
 
-                    timerInicio.Start();
-                    MessageBox.Show("Bienvenido " + usuario);
+                    //timerInicio.Start();
+                    MessageBox.Show("Bienvenido " + usuarioActual);
                     
-                    frmMenu v = new frmMenu(Auditoria);
+                    frmMenu v = new frmMenu(Auditoria,Usuarios);
                     
                     v.ShowDialog();
                     

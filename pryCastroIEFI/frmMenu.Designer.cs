@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             tareasToolStripMenuItem = new ToolStripMenuItem();
             administraciónToolStripMenuItem = new ToolStripMenuItem();
@@ -36,7 +37,13 @@
             miPerfilToolStripMenuItem = new ToolStripMenuItem();
             cerrarSesionToolStripMenuItem = new ToolStripMenuItem();
             cambiarContraseñaToolStripMenuItem = new ToolStripMenuItem();
+            tmrTemporizador = new System.Windows.Forms.Timer(components);
+            statusStrip1 = new StatusStrip();
+            toolStripStatusNombre = new ToolStripStatusLabel();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            StatusStripTiempo = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -95,11 +102,42 @@
             cambiarContraseñaToolStripMenuItem.Size = new Size(182, 22);
             cambiarContraseñaToolStripMenuItem.Text = "Cambiar Contraseña";
             // 
+            // tmrTemporizador
+            // 
+            tmrTemporizador.Tick += tmrTemporizador_Tick;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusNombre, toolStripStatusLabel1, StatusStripTiempo });
+            statusStrip1.Location = new Point(0, 428);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(800, 22);
+            statusStrip1.TabIndex = 1;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusNombre
+            // 
+            toolStripStatusNombre.Name = "toolStripStatusNombre";
+            toolStripStatusNombre.Size = new Size(0, 17);
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(0, 17);
+            toolStripStatusLabel1.Click += toolStripStatusLabel1_Click;
+            // 
+            // StatusStripTiempo
+            // 
+            StatusStripTiempo.Name = "StatusStripTiempo";
+            StatusStripTiempo.Size = new Size(0, 17);
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            ControlBox = false;
+            Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "frmMenu";
@@ -108,6 +146,8 @@
             Load += frmMenu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -122,5 +162,10 @@
         private ToolStripMenuItem miPerfilToolStripMenuItem;
         private ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.Timer tmrTemporizador;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusNombre;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel StatusStripTiempo;
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace pryCastroIEFI
 {
-    internal class clsUsuarios
+    public class clsUsuarios
     {
         private clsConexionBD conexion = new clsConexionBD();
 
@@ -31,12 +31,13 @@ namespace pryCastroIEFI
 
         
 
-        public bool rol(string usuario, string contraseña)
+        public string ObtenerRol(string usuario, string contraseña)
         {
             //CODIGO DEL ROL
             string rol = "";
             try
             {
+                
 
                 string query = "SELECT Rol FROM Usuarios WHERE Usuario = @Usuario AND Clave = @Clave";
                 SqlCommand comando = new SqlCommand(query);
@@ -48,7 +49,10 @@ namespace pryCastroIEFI
                 if (dt.Rows.Count > 0)
                 {
                     rol = dt.Rows[0]["Rol"].ToString();
+
                 }
+
+                return rol;
             }
 
             catch (Exception ex)
@@ -56,7 +60,7 @@ namespace pryCastroIEFI
                 MessageBox.Show("Error al verificar usuario:" + ex.Message);
             }
 
-            return false;
+            return rol;
         }
 
 

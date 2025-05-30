@@ -34,13 +34,14 @@ namespace pryCastroIEFI
         public void CerrarSesion()
         {
             finSesion = DateTime.Now;
-            TimeSpan duracion = finSesion - inicioSesion;
+            TimeSpan diferencia = finSesion - inicioSesion;
+            TimeSpan duracion = new TimeSpan(diferencia.Hours,diferencia.Minutes,diferencia.Seconds);
 
-            string query = "UPDATE Auditoria SET FechaHoraFin = @fin, DuracionSegundos = @duracion " +
+            string query = "UPDATE Auditoria SET FechaHoraFin = @fin, Duracion = @duracion " +
                    "WHERE Usuario = @usuario AND FechaHoraInicio = @inicio";
             SqlCommand comando = new SqlCommand(query);
             comando.Parameters.AddWithValue("@fin", finSesion);
-            comando.Parameters.AddWithValue("@duracion", (int)duracion.TotalSeconds);
+            comando.Parameters.AddWithValue("@duracion", duracion);
             comando.Parameters.AddWithValue("@usuario", usuarioActual);
             comando.Parameters.AddWithValue("@inicio", inicioSesion);
 
@@ -52,7 +53,7 @@ namespace pryCastroIEFI
 
         public void MostrarGrilla(DataGridView dgv)
         {
-            string query = "SELECT Usuario, FechaHoraInicio, FechaHoraFin, DuracionSegundos FROM Auditoria";
+            string query = "SELECT Usuario, FechaHoraInicio, FechaHoraFin, Duracion FROM Auditoria";
             SqlCommand comando = new SqlCommand(query);
             DataTable dt = conexion.EjecutarConsulta(comando);
 
