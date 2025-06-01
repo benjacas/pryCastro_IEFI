@@ -93,6 +93,16 @@ namespace pryCastroIEFI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_naranja_login {
+            get {
+                object obj = ResourceManager.GetObject("fondo naranja login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_clave_contrasena_1134231_5107 {
             get {
                 object obj = ResourceManager.GetObject("icono-clave-contrasena_1134231-5107", resourceCulture);

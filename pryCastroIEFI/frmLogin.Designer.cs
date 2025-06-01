@@ -46,14 +46,14 @@
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             btnCerrar = new Guna.UI2.WinForms.Guna2Button();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            picLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
             btnIngresar = new Guna.UI2.WinForms.Guna2Button();
             panelIngresar = new Guna.UI2.WinForms.Guna2Panel();
             timerInicio = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picLogin).BeginInit();
             panelIngresar.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,6 +84,7 @@
             btnCerrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCerrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCerrar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCerrar.FillColor = Color.FromArgb(255, 127, 62);
             btnCerrar.Font = new Font("Segoe UI", 9F);
             btnCerrar.ForeColor = Color.White;
             btnCerrar.Location = new Point(705, 12);
@@ -94,16 +95,17 @@
             btnCerrar.Text = "X";
             btnCerrar.Click += btnCerrar_Click;
             // 
-            // guna2PictureBox1
+            // picLogin
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges3;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(-6, -1);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2PictureBox1.Size = new Size(317, 443);
-            guna2PictureBox1.TabIndex = 0;
-            guna2PictureBox1.TabStop = false;
+            picLogin.CustomizableEdges = customizableEdges3;
+            picLogin.Image = pryCastroIEFI.Properties.Resources.fondo_naranja_login;
+            picLogin.ImageRotate = 0F;
+            picLogin.Location = new Point(-6, -1);
+            picLogin.Name = "picLogin";
+            picLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            picLogin.Size = new Size(317, 443);
+            picLogin.TabIndex = 0;
+            picLogin.TabStop = false;
             // 
             // txtUsuario
             // 
@@ -142,7 +144,7 @@
             txtContraseña.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtContraseña.Font = new Font("Segoe UI", 9F);
             txtContraseña.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtContraseña.Location = new Point(9, 120);
+            txtContraseña.Location = new Point(9, 133);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PlaceholderText = "Contraseña";
             txtContraseña.SelectedText = "";
@@ -155,7 +157,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(3, 10);
+            label3.Location = new Point(19, 10);
             label3.Name = "label3";
             label3.Size = new Size(190, 31);
             label3.TabIndex = 9;
@@ -170,9 +172,10 @@
             btnIngresar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnIngresar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnIngresar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnIngresar.FillColor = Color.FromArgb(255, 127, 62);
             btnIngresar.Font = new Font("Segoe UI", 9F);
             btnIngresar.ForeColor = Color.White;
-            btnIngresar.Location = new Point(9, 203);
+            btnIngresar.Location = new Point(9, 212);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnIngresar.Size = new Size(200, 45);
@@ -203,7 +206,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(750, 442);
             Controls.Add(btnCerrar);
-            Controls.Add(guna2PictureBox1);
+            Controls.Add(picLogin);
             Controls.Add(panelIngresar);
             Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlDarkDark;
@@ -212,7 +215,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += frmLogin_Load;
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picLogin).EndInit();
             panelIngresar.ResumeLayout(false);
             panelIngresar.PerformLayout();
             ResumeLayout(false);
@@ -222,7 +225,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox picLogin;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
