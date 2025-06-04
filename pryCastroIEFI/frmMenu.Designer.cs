@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             tareasToolStripMenuItem = new ToolStripMenuItem();
+            registrarTareasToolStripMenuItem = new ToolStripMenuItem();
+            verTareasToolStripMenuItem = new ToolStripMenuItem();
             administraciónToolStripMenuItem = new ToolStripMenuItem();
             gestionDeUsuariosToolStripMenuItem = new ToolStripMenuItem();
             auditoriaToolStripMenuItem = new ToolStripMenuItem();
@@ -57,9 +59,24 @@
             // 
             // tareasToolStripMenuItem
             // 
+            tareasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registrarTareasToolStripMenuItem, verTareasToolStripMenuItem });
             tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
             tareasToolStripMenuItem.Size = new Size(51, 20);
             tareasToolStripMenuItem.Text = "Tareas";
+            // 
+            // registrarTareasToolStripMenuItem
+            // 
+            registrarTareasToolStripMenuItem.Name = "registrarTareasToolStripMenuItem";
+            registrarTareasToolStripMenuItem.Size = new Size(180, 22);
+            registrarTareasToolStripMenuItem.Text = "Registrar Tareas";
+            registrarTareasToolStripMenuItem.Click += registrarTareasToolStripMenuItem_Click;
+            // 
+            // verTareasToolStripMenuItem
+            // 
+            verTareasToolStripMenuItem.Name = "verTareasToolStripMenuItem";
+            verTareasToolStripMenuItem.Size = new Size(180, 22);
+            verTareasToolStripMenuItem.Text = "Ver Tareas";
+            verTareasToolStripMenuItem.Click += verTareasToolStripMenuItem_Click;
             // 
             // administraciónToolStripMenuItem
             // 
@@ -167,5 +184,7 @@
         private ToolStripStatusLabel toolStripStatusNombre;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel StatusStripTiempo;
+        private ToolStripMenuItem registrarTareasToolStripMenuItem;
+        private ToolStripMenuItem verTareasToolStripMenuItem;
     }
 }

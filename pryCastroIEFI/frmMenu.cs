@@ -38,6 +38,12 @@ namespace pryCastroIEFI
             usuarios.ShowDialog();
         }
 
+        private void registrarTareasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarTareas abrirTareas = new frmRegistrarTareas();
+            abrirTareas.ShowDialog();
+        }
+
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -84,6 +90,12 @@ namespace pryCastroIEFI
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void verTareasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarTareas abrirTareas = new frmMostrarTareas();
+            abrirTareas.ShowDialog();
         }
     }
 }
