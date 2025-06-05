@@ -31,7 +31,14 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvMostrar = new Guna.UI2.WinForms.Guna2DataGridView();
+            txtBuscarNombre = new Guna.UI2.WinForms.Guna2TextBox();
+            btnBuscarNombre = new Guna.UI2.WinForms.Guna2Button();
+            lblBuscarNombre = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +70,7 @@
             dgvMostrar.Name = "dgvMostrar";
             dgvMostrar.ReadOnly = true;
             dgvMostrar.RowHeadersVisible = false;
-            dgvMostrar.Size = new Size(573, 316);
+            dgvMostrar.Size = new Size(689, 330);
             dgvMostrar.TabIndex = 0;
             dgvMostrar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvMostrar.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -87,11 +94,59 @@
             dgvMostrar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvMostrar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // txtBuscarNombre
+            // 
+            txtBuscarNombre.CustomizableEdges = customizableEdges1;
+            txtBuscarNombre.DefaultText = "";
+            txtBuscarNombre.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtBuscarNombre.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtBuscarNombre.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtBuscarNombre.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtBuscarNombre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtBuscarNombre.Font = new Font("Segoe UI", 9F);
+            txtBuscarNombre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtBuscarNombre.Location = new Point(59, 402);
+            txtBuscarNombre.Name = "txtBuscarNombre";
+            txtBuscarNombre.PlaceholderText = "Buscar por Nombre";
+            txtBuscarNombre.SelectedText = "";
+            txtBuscarNombre.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtBuscarNombre.Size = new Size(200, 36);
+            txtBuscarNombre.TabIndex = 2;
+            // 
+            // btnBuscarNombre
+            // 
+            btnBuscarNombre.CustomizableEdges = customizableEdges3;
+            btnBuscarNombre.DisabledState.BorderColor = Color.DarkGray;
+            btnBuscarNombre.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBuscarNombre.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBuscarNombre.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBuscarNombre.Font = new Font("Segoe UI", 9F);
+            btnBuscarNombre.ForeColor = Color.White;
+            btnBuscarNombre.Location = new Point(265, 408);
+            btnBuscarNombre.Name = "btnBuscarNombre";
+            btnBuscarNombre.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnBuscarNombre.Size = new Size(180, 30);
+            btnBuscarNombre.TabIndex = 3;
+            btnBuscarNombre.Text = "Buscar";
+            btnBuscarNombre.Click += btnBuscarNombre_Click;
+            // 
+            // lblBuscarNombre
+            // 
+            lblBuscarNombre.BackColor = Color.Transparent;
+            lblBuscarNombre.Location = new Point(60, 379);
+            lblBuscarNombre.Name = "lblBuscarNombre";
+            lblBuscarNombre.Size = new Size(106, 17);
+            lblBuscarNombre.TabIndex = 4;
+            lblBuscarNombre.Text = "Buscar por Nombre";
+            // 
             // frmMostrarTareas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblBuscarNombre);
+            Controls.Add(btnBuscarNombre);
+            Controls.Add(txtBuscarNombre);
             Controls.Add(dgvMostrar);
             Name = "frmMostrarTareas";
             StartPosition = FormStartPosition.CenterScreen;
@@ -99,10 +154,14 @@
             Load += frmMostrarTareas_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvMostrar;
+        private Guna.UI2.WinForms.Guna2TextBox txtBuscarNombre;
+        private Guna.UI2.WinForms.Guna2Button btnBuscarNombre;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBuscarNombre;
     }
 }

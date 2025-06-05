@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace pryCastroIEFI
 {
@@ -17,26 +19,22 @@ namespace pryCastroIEFI
             InitializeComponent();
         }
 
-        
+        List<clsTareas> tareasCargadas = new List<clsTareas>();
 
         private void cmbTarea_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        
+
         private void frmRegistrarTareas_Load(object sender, EventArgs e)
         {
+            clsTareas cargaTarea = new clsTareas();
+            cargaTarea.CargarNombresDeTarea(cmbTarea);
 
-            string[] vecTareas = new string[] { "Auditoría", "Consultas", "Inspección", "Reclamos", "Visita" };
             string[] vecLugar = new string[] { "Empresa", "Servicio", "Oficina" };
             string[] vecColumnas = new string[] { "Tarea", "Lugar", "Fecha" };
 
-
-            foreach (string tareas in vecTareas)
-            {
-                cmbTarea.Items.Add(tareas);
-            }
 
             foreach (string lugar in vecLugar)
             {
@@ -55,15 +53,20 @@ namespace pryCastroIEFI
         {
 
             string tarea = cmbTarea.Text;
-            string fecha = dtFecha.Text;
+            DateTime fecha = dtFecha.Value;
             string lugar = cmbLugar.Text;
 
-            if (!string.IsNullOrEmpty(tarea) && !string.IsNullOrEmpty(fecha) && !string.IsNullOrEmpty(lugar))
+            if (!string.IsNullOrEmpty(tarea) && !string.IsNullOrEmpty(lugar))
             {
                 dgvMostrar.Rows.Add(tarea, lugar, fecha);
+                
+
+                clsTareas nueva = new clsTareas { NombreTarea = tarea, Lugar = lugar, Fecha = fecha };
+                tareasCargadas.Add(nueva);
+
+
                 cmbLugar.SelectedIndex = -1;
                 cmbTarea.SelectedIndex = -1;
-
             }
             else
             {
@@ -92,41 +95,51 @@ namespace pryCastroIEFI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsTareas nuevaTarea = new clsTareas();
-            string insumo = "Insumo";
-            string estudio = "Estudio";
-            string vacacion = "Vacación";
-            string recibo = "Recibo";
-            string salario = "Salario";
+            string uniforme="";
+            string licencia="";
+            string reclamo="";
+            string comentario=txtComentario.Text;
 
             if (chkInsumo.Checked)
             {
-                nuevaTarea.Detalle = insumo;
+                uniforme = "Insumo";
             }
             if (chkEstudio.Checked)
             {
-                nuevaTarea.Detalle = estudio;
+                licencia = "Estudio";
             }
             if (chkRecibo.Checked)
             {
-                nuevaTarea.Detalle = recibo;
+                reclamo = "Recibo";
             }
             if (chkVacacion.Checked)
             {
-                nuevaTarea.Detalle = vacacion;
+                licencia = "Vacación";
             }
             if (chkSalario.Checked)
             {
-                nuevaTarea.Detalle = salario;
+                reclamo = "salario";
+            }
+            if (chkVacacion.Checked && chkEstudio.Checked)
+            {
+                licencia = "Estudio, Vacación";
+            }
+            if (chkSalario.Checked && chkRecibo.Checked) 
+            {
+                reclamo = "Salario, Recbio";
             }
 
+            nuevaTarea.GuardarDetallesYAsignar(uniforme,licencia,reclamo,comentario);
+        }
 
 
-            nuevaTarea.NombreTarea = cmbTarea.Text;
-            nuevaTarea.Fecha = dtFecha.Value;
-            nuevaTarea.Lugar = cmbLugar.Text;
-            nuevaTarea.Comentario = txtComentario.Text;
 
-            nuevaTarea.AgregarTarea(nuevaTarea);
+        private void btnGuardarTareas_Click(object sender, EventArgs e)
+        {
+            clsTareas nuevaTarea = new clsTareas();
+
+            nuevaTarea.AgregarTarea(tareasCargadas);
+            tareasCargadas.Clear();
         }
     }
 }
