@@ -21,7 +21,7 @@ namespace pryCastroIEFI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("Cerrar Pestaña para actualizar tareas");
+            //MessageBox.Show("Cerrar Pestaña para actualizar tareas");
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -37,6 +37,7 @@ namespace pryCastroIEFI
 
             nombreTarea.NombreParaAgregarTarea(nuevoNombre);
             txtTarea.Clear();
+            this.Close();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace pryCastroIEFI
 
         public bool VerificarLogin(string usuario, string contraseña)
         {
-            string query = "SELECT COUNT (*) FROM Usuarios WHERE Usuario =@Usuario AND Clave = Clave";
+            string query = "SELECT COUNT (*) FROM Usuarios WHERE Usuario =@Usuario AND Clave = @Clave";
             SqlCommand comando = new SqlCommand(query);
             comando.Parameters.AddWithValue("@Usuario", usuario);
             comando.Parameters.AddWithValue("@Clave", contraseña);
