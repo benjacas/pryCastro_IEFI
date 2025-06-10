@@ -21,5 +21,22 @@ namespace pryCastroIEFI
         {
             this.Close();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsTareas nombreLugar = new clsTareas();
+            string nuevoNombre = txtLugar.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nuevoNombre))
+            {
+                MessageBox.Show("Debe ingresar un nombre válido.");
+                return;
+            }
+
+            nombreLugar.NombreParaAgregarLugares(nuevoNombre);
+            txtLugar.Clear();
+
+            this.Close();
+        }
     }
 }

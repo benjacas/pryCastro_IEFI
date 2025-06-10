@@ -20,26 +20,20 @@ namespace pryCastroIEFI
         }
 
         List<clsTareas> tareasCargadas = new List<clsTareas>();
-
+        clsTareas cargaTareaLugares = new clsTareas();
         private void cmbTarea_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
 
         private void frmRegistrarTareas_Load(object sender, EventArgs e)
         {
-            clsTareas cargaTarea = new clsTareas();
-            cargaTarea.CargarNombresDeTarea(cmbTarea);
-
-            string[] vecLugar = new string[] { "Empresa", "Servicio", "Oficina" };
+            
+            cargaTareaLugares.CargarNombresDeTarea(cmbTarea);
+            cargaTareaLugares.CargarNombresDeLugares(cmbLugar);
+            
             string[] vecColumnas = new string[] { "Tarea", "Lugar", "Fecha" };
 
-
-            foreach (string lugar in vecLugar)
-            {
-                cmbLugar.Items.Add(lugar);
-            }
 
             foreach (string columnas in vecColumnas)
             {

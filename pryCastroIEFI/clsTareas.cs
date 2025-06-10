@@ -148,5 +148,39 @@ namespace pryCastroIEFI
             }
         }
 
+        public void CargarNombresDeLugares(ComboBox combo)
+        {
+            string query = "SELECT Nombre FROM NombreLugares";
+            SqlCommand comando = new SqlCommand(query);
+            DataTable tabla = conexion.EjecutarConsulta(comando);
+
+            combo.Items.Clear();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                combo.Items.Add(fila["Nombre"].ToString());
+            }
+        }
+
+        public void NombreParaAgregarLugares(string nuevoLugar)
+        {
+            string query = "INSERT INTO NombreLugares (Nombre) VALUES (@nombre)";
+            SqlCommand comando = new SqlCommand(query);
+            comando.Parameters.AddWithValue("@nombre", nuevoLugar);
+
+            try
+            {
+                conexion.EjecutarComando(comando);
+                MessageBox.Show("Nombre de Lugar agregado correctamente.");
+
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627) // Violación de restricción UNIQUE
+                    MessageBox.Show("Ese Lugar ya existe.");
+                else
+                    MessageBox.Show("Error al agregar: " + ex.Message);
+            }
+        }
+
     }
 }
