@@ -46,7 +46,7 @@ namespace pryCastroIEFI
 
         public void GuardarDetallesYAsignar(string uniforme, string licencia, string reclamo, string comentario)
         {
-            // Paso 1: Insertar detalle
+           
             string queryDetalle = "INSERT INTO DetallesTarea (Uniforme, Licencia, Reclamo, Comentario) " +
                                   "VALUES (@Uniforme, @Licencia, @Reclamo, @Comentario); SELECT SCOPE_IDENTITY();";
 
@@ -56,11 +56,11 @@ namespace pryCastroIEFI
             comando.Parameters.AddWithValue("@Reclamo", reclamo);
             comando.Parameters.AddWithValue("@Comentario", comentario);
 
-            // Obtener el ID del nuevo detalle
+            
             DataTable dt = conexion.EjecutarConsulta(comando);
             int idDetalle = Convert.ToInt32(dt.Rows[0][0]);
 
-            // Paso 2: Asignar a todas las tareas sin detalle
+          
             string queryAsignar = "UPDATE Tareas SET IdDetalle = @IdDetalle WHERE IdDetalle IS NULL";
             SqlCommand comandoAsignar = new SqlCommand(queryAsignar);
             comandoAsignar.Parameters.AddWithValue("@IdDetalle", idDetalle);
