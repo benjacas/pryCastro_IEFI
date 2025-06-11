@@ -33,8 +33,11 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEliminarUsuarios));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvMostrar = new Guna.UI2.WinForms.Guna2DataGridView();
             btnEliminar = new Guna.UI2.WinForms.Guna2Button();
+            btnVolver = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             SuspendLayout();
             // 
@@ -108,11 +111,27 @@
             btnEliminar.Text = "Eliminar";
             btnEliminar.Click += btnEliminar_Click;
             // 
+            // btnVolver
+            // 
+            btnVolver.CheckedState.ImageSize = new Size(64, 64);
+            btnVolver.HoverState.ImageSize = new Size(64, 64);
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.ImageOffset = new Point(0, 0);
+            btnVolver.ImageRotate = 0F;
+            btnVolver.Location = new Point(3, 3);
+            btnVolver.Name = "btnVolver";
+            btnVolver.PressedState.ImageSize = new Size(64, 64);
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnVolver.Size = new Size(35, 36);
+            btnVolver.TabIndex = 10;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmEliminarUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(btnEliminar);
             Controls.Add(dgvMostrar);
             Name = "frmEliminarUsuarios";
@@ -127,5 +146,6 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvMostrar;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
+        private Guna.UI2.WinForms.Guna2ImageButton btnVolver;
     }
 }

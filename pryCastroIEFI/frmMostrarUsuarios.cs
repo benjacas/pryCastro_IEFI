@@ -38,5 +38,10 @@ namespace pryCastroIEFI
             dgvMostrar.DataSource = Resultados;
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -41,11 +41,11 @@ namespace pryGestionInventario2
             {
                 if (Usuarios.VerificarLogin(usuarioActual, contraseñaActual))
                 {
-                    //Usuarios.ObtenerRol(usuario, contraseña);//acá se buscar que rol tiene, falta terminar
+                  
 
                     Auditoria.IniciarSesion(usuarioActual);
 
-                    //timerInicio.Start();
+                    
                     MessageBox.Show("Bienvenido " + usuarioActual);
                     
                     frmMenu v = new frmMenu(Auditoria,Usuarios);

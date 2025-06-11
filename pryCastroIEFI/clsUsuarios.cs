@@ -29,16 +29,10 @@ namespace pryCastroIEFI
 
         }
 
-        
-
         public string ObtenerRol(string usuario, string contraseña)
         {
-            //CODIGO DEL ROL
-            string rol = "";
             try
             {
-                
-
                 string query = "SELECT Rol FROM Usuarios WHERE Usuario = @Usuario AND Clave = @Clave";
                 SqlCommand comando = new SqlCommand(query);
                 comando.Parameters.AddWithValue("@Usuario", usuario);
@@ -48,19 +42,18 @@ namespace pryCastroIEFI
 
                 if (dt.Rows.Count > 0)
                 {
-                    rol = dt.Rows[0]["Rol"].ToString();
-
+                    return dt.Rows[0]["Rol"].ToString();
                 }
-
-                return rol;
+                else
+                {
+                    return "";
+                }
             }
-
             catch (Exception ex)
             {
-                MessageBox.Show("Error al verificar usuario:" + ex.Message);
+                MessageBox.Show("Error al verificar el usuario: " + ex.Message);
+                return "";
             }
-
-            return rol;
         }
 
 

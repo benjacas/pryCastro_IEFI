@@ -35,10 +35,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMostrarUsuarios));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvMostrar = new Guna.UI2.WinForms.Guna2DataGridView();
             txtBuscarNombre = new Guna.UI2.WinForms.Guna2TextBox();
             lblNombreBuscar = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnBuscar = new Guna.UI2.WinForms.Guna2Button();
+            btnVolver = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             SuspendLayout();
             // 
@@ -139,11 +142,27 @@
             btnBuscar.Text = "Buscar";
             btnBuscar.Click += btnBuscar_Click;
             // 
+            // btnVolver
+            // 
+            btnVolver.CheckedState.ImageSize = new Size(64, 64);
+            btnVolver.HoverState.ImageSize = new Size(64, 64);
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.ImageOffset = new Point(0, 0);
+            btnVolver.ImageRotate = 0F;
+            btnVolver.Location = new Point(2, 3);
+            btnVolver.Name = "btnVolver";
+            btnVolver.PressedState.ImageSize = new Size(64, 64);
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnVolver.Size = new Size(35, 36);
+            btnVolver.TabIndex = 10;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmMostrarUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 420);
+            Controls.Add(btnVolver);
             Controls.Add(btnBuscar);
             Controls.Add(lblNombreBuscar);
             Controls.Add(txtBuscarNombre);
@@ -163,5 +182,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarNombre;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreBuscar;
         private Guna.UI2.WinForms.Guna2Button btnBuscar;
+        private Guna.UI2.WinForms.Guna2ImageButton btnVolver;
     }
 }

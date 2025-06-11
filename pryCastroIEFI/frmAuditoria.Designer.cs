@@ -31,7 +31,10 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoria));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvMostrar = new Guna.UI2.WinForms.Guna2DataGridView();
+            btnVolver = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             SuspendLayout();
             // 
@@ -87,11 +90,27 @@
             dgvMostrar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvMostrar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // btnVolver
+            // 
+            btnVolver.CheckedState.ImageSize = new Size(64, 64);
+            btnVolver.HoverState.ImageSize = new Size(64, 64);
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.ImageOffset = new Point(0, 0);
+            btnVolver.ImageRotate = 0F;
+            btnVolver.Location = new Point(3, 1);
+            btnVolver.Name = "btnVolver";
+            btnVolver.PressedState.ImageSize = new Size(64, 64);
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnVolver.Size = new Size(35, 36);
+            btnVolver.TabIndex = 10;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmAuditoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(dgvMostrar);
             Name = "frmAuditoria";
             StartPosition = FormStartPosition.CenterScreen;
@@ -104,5 +123,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvMostrar;
+        private Guna.UI2.WinForms.Guna2ImageButton btnVolver;
     }
 }

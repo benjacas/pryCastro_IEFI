@@ -38,7 +38,6 @@
             auditoriaToolStripMenuItem = new ToolStripMenuItem();
             miPerfilToolStripMenuItem = new ToolStripMenuItem();
             cerrarSesionToolStripMenuItem = new ToolStripMenuItem();
-            cambiarContraseñaToolStripMenuItem = new ToolStripMenuItem();
             tmrTemporizador = new System.Windows.Forms.Timer(components);
             statusStrip1 = new StatusStrip();
             toolStripStatusNombre = new ToolStripStatusLabel();
@@ -67,14 +66,14 @@
             // registrarTareasToolStripMenuItem
             // 
             registrarTareasToolStripMenuItem.Name = "registrarTareasToolStripMenuItem";
-            registrarTareasToolStripMenuItem.Size = new Size(180, 22);
+            registrarTareasToolStripMenuItem.Size = new Size(155, 22);
             registrarTareasToolStripMenuItem.Text = "Registrar Tareas";
             registrarTareasToolStripMenuItem.Click += registrarTareasToolStripMenuItem_Click;
             // 
             // verTareasToolStripMenuItem
             // 
             verTareasToolStripMenuItem.Name = "verTareasToolStripMenuItem";
-            verTareasToolStripMenuItem.Size = new Size(180, 22);
+            verTareasToolStripMenuItem.Size = new Size(155, 22);
             verTareasToolStripMenuItem.Text = "Ver Tareas";
             verTareasToolStripMenuItem.Click += verTareasToolStripMenuItem_Click;
             // 
@@ -101,7 +100,7 @@
             // 
             // miPerfilToolStripMenuItem
             // 
-            miPerfilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cerrarSesionToolStripMenuItem, cambiarContraseñaToolStripMenuItem });
+            miPerfilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cerrarSesionToolStripMenuItem });
             miPerfilToolStripMenuItem.Name = "miPerfilToolStripMenuItem";
             miPerfilToolStripMenuItem.Size = new Size(63, 20);
             miPerfilToolStripMenuItem.Text = "Mi Perfil";
@@ -109,15 +108,9 @@
             // cerrarSesionToolStripMenuItem
             // 
             cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            cerrarSesionToolStripMenuItem.Size = new Size(182, 22);
+            cerrarSesionToolStripMenuItem.Size = new Size(180, 22);
             cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             cerrarSesionToolStripMenuItem.Click += cerrarSesionToolStripMenuItem_Click;
-            // 
-            // cambiarContraseñaToolStripMenuItem
-            // 
-            cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
-            cambiarContraseñaToolStripMenuItem.Size = new Size(182, 22);
-            cambiarContraseñaToolStripMenuItem.Text = "Cambiar Contraseña";
             // 
             // tmrTemporizador
             // 
@@ -178,7 +171,6 @@
         private ToolStripMenuItem auditoriaToolStripMenuItem;
         private ToolStripMenuItem miPerfilToolStripMenuItem;
         private ToolStripMenuItem cerrarSesionToolStripMenuItem;
-        private ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
         private System.Windows.Forms.Timer tmrTemporizador;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusNombre;

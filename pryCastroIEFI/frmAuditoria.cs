@@ -21,5 +21,10 @@ namespace pryCastroIEFI
         {
             Auditoria.MostrarGrilla(dgvMostrar);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

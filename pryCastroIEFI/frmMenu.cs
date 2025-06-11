@@ -40,7 +40,7 @@ namespace pryCastroIEFI
 
         private void registrarTareasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistrarTareas abrirTareas = new frmRegistrarTareas();
+            frmRegistrarTareas abrirTareas = new frmRegistrarTareas(UsuarioLogin);
             abrirTareas.ShowDialog();
         }
 
@@ -65,7 +65,6 @@ namespace pryCastroIEFI
             if (rol == "Operador")
             {
                 administraciónToolStripMenuItem.Visible = false;
-                //FALTA HACER EL MENU BIEN Y LUEGO DESACTIVAR EL BOTON QUE SE USE Y LISTO .VISIBLE=FALSE;
             }
             tmrTemporizador.Interval = 1000; // 1 segundo
             tmrTemporizador.Tick += tmrTemporizador_Tick;

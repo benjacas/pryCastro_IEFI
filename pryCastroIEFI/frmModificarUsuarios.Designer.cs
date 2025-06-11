@@ -41,6 +41,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarUsuarios));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvMostrar = new Guna.UI2.WinForms.Guna2DataGridView();
             cmbRol = new Guna.UI2.WinForms.Guna2ComboBox();
             lblRol = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -51,6 +53,7 @@
             btnModificar = new Guna.UI2.WinForms.Guna2Button();
             lblIDUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtIdUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            btnVolver = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             SuspendLayout();
             // 
@@ -233,11 +236,27 @@
             txtIdUsuario.Size = new Size(164, 36);
             txtIdUsuario.TabIndex = 16;
             // 
+            // btnVolver
+            // 
+            btnVolver.CheckedState.ImageSize = new Size(64, 64);
+            btnVolver.HoverState.ImageSize = new Size(64, 64);
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.ImageOffset = new Point(0, 0);
+            btnVolver.ImageRotate = 0F;
+            btnVolver.Location = new Point(3, 3);
+            btnVolver.Name = "btnVolver";
+            btnVolver.PressedState.ImageSize = new Size(64, 64);
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btnVolver.Size = new Size(35, 36);
+            btnVolver.TabIndex = 18;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmModificarUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(lblIDUsuario);
             Controls.Add(txtIdUsuario);
             Controls.Add(btnModificar);
@@ -269,5 +288,6 @@
         private Guna.UI2.WinForms.Guna2Button btnModificar;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblIDUsuario;
         private Guna.UI2.WinForms.Guna2TextBox txtIdUsuario;
+        private Guna.UI2.WinForms.Guna2ImageButton btnVolver;
     }
 }

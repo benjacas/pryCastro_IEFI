@@ -14,9 +14,11 @@ namespace pryCastroIEFI
 {
     public partial class frmRegistrarTareas : Form
     {
-        public frmRegistrarTareas()
+        private clsUsuarios UsuarioLogin;
+        public frmRegistrarTareas(clsUsuarios usuarioLogin)
         {
             InitializeComponent();
+            UsuarioLogin = usuarioLogin;
         }
 
         List<clsTareas> tareasCargadas = new List<clsTareas>();
@@ -28,10 +30,10 @@ namespace pryCastroIEFI
 
         private void frmRegistrarTareas_Load(object sender, EventArgs e)
         {
-            
+
             cargaTareaLugares.CargarNombresDeTarea(cmbTarea);
             cargaTareaLugares.CargarNombresDeLugares(cmbLugar);
-            
+
             string[] vecColumnas = new string[] { "Tarea", "Lugar", "Fecha" };
 
 
@@ -41,6 +43,18 @@ namespace pryCastroIEFI
             }
 
             dtFecha.MaxDate = DateTime.Now;
+
+
+            clsUsuarios Usuarios = new clsUsuarios();
+            string nombreUsuario = UsuarioLogin.Usuario;
+            string contraseña = UsuarioLogin.Clave;
+
+            string rol = Usuarios.ObtenerRol(nombreUsuario, contraseña);
+            if (rol == "Operador")
+            {
+                btnAgregarLugar.Visible = false;
+                btnAgregarTarea.Visible = false;
+            }
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -53,7 +67,7 @@ namespace pryCastroIEFI
             if (!string.IsNullOrEmpty(tarea) && !string.IsNullOrEmpty(lugar))
             {
                 dgvMostrar.Rows.Add(tarea, lugar, fecha);
-                
+
 
                 clsTareas nueva = new clsTareas { NombreTarea = tarea, Lugar = lugar, Fecha = fecha };
                 tareasCargadas.Add(nueva);
@@ -89,10 +103,10 @@ namespace pryCastroIEFI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsTareas nuevaTarea = new clsTareas();
-            string uniforme="";
-            string licencia="";
-            string reclamo="";
-            string comentario=txtComentario.Text;
+            string uniforme = "";
+            string licencia = "";
+            string reclamo = "";
+            string comentario = txtComentario.Text;
 
             if (chkInsumo.Checked)
             {
@@ -118,12 +132,12 @@ namespace pryCastroIEFI
             {
                 licencia = "Estudio, Vacación";
             }
-            if (chkSalario.Checked && chkRecibo.Checked) 
+            if (chkSalario.Checked && chkRecibo.Checked)
             {
                 reclamo = "Salario, Recbio";
             }
 
-            nuevaTarea.GuardarDetallesYAsignar(uniforme,licencia,reclamo,comentario);
+            nuevaTarea.GuardarDetallesYAsignar(uniforme, licencia, reclamo, comentario);
         }
 
 
@@ -134,6 +148,11 @@ namespace pryCastroIEFI
 
             nuevaTarea.AgregarTarea(tareasCargadas);
             tareasCargadas.Clear();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

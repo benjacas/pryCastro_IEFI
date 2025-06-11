@@ -30,7 +30,7 @@ namespace pryCastroIEFI
             if (dgvMostrar.SelectedRows.Count == 0)
             {
                 btnEliminar.Enabled = false;
-                
+
                 return;
             }
             else
@@ -43,7 +43,7 @@ namespace pryCastroIEFI
                 CargarUsuario();
             }
 
-            
+
         }
 
         public void CargarUsuario()
@@ -57,6 +57,9 @@ namespace pryCastroIEFI
             }
         }
 
-        
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

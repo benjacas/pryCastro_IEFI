@@ -31,5 +31,10 @@ namespace pryCastroIEFI
             clsTareas gestor = new clsTareas();
             dgvMostrar.DataSource = gestor.BuscarTareasPorNombre(nombre);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace pryCastroIEFI
     {
         DateTime inicioSesion { get; set; }
         public DateTime finSesion { get; set; }
-        public string usuarioActual ;
+        public string usuarioActual;
 
         clsConexionBD conexion = new clsConexionBD();
 
@@ -46,9 +46,6 @@ namespace pryCastroIEFI
             comando.Parameters.AddWithValue("@inicio", inicioSesion);
 
             conexion.EjecutarComando(comando);
-
-            MessageBox.Show("inicioSesion: " + inicioSesion.ToString());
-            MessageBox.Show("finSesion: " + finSesion.ToString());
         }
 
         public void MostrarGrilla(DataGridView dgv)

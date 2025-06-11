@@ -39,6 +39,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarUsuarios));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvMostrar = new Guna.UI2.WinForms.Guna2DataGridView();
             btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             txtNombreUsuario = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +49,7 @@
             lblContraseña = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblRol = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbRol = new Guna.UI2.WinForms.Guna2ComboBox();
+            btnVolver = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             SuspendLayout();
             // 
@@ -121,12 +124,14 @@
             // 
             // txtNombreUsuario
             // 
+            txtNombreUsuario.BackColor = SystemColors.ButtonHighlight;
             txtNombreUsuario.CustomizableEdges = customizableEdges3;
             txtNombreUsuario.DefaultText = "";
             txtNombreUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNombreUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtNombreUsuario.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtNombreUsuario.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNombreUsuario.FillColor = Color.Silver;
             txtNombreUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNombreUsuario.Font = new Font("Segoe UI", 9F);
             txtNombreUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -146,6 +151,7 @@
             txtContraseña.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtContraseña.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtContraseña.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtContraseña.FillColor = Color.Silver;
             txtContraseña.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtContraseña.Font = new Font("Segoe UI", 9F);
             txtContraseña.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -190,6 +196,7 @@
             cmbRol.CustomizableEdges = customizableEdges7;
             cmbRol.DrawMode = DrawMode.OwnerDrawFixed;
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRol.FillColor = Color.Silver;
             cmbRol.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbRol.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbRol.Font = new Font("Segoe UI", 10F);
@@ -201,11 +208,27 @@
             cmbRol.Size = new Size(253, 36);
             cmbRol.TabIndex = 8;
             // 
+            // btnVolver
+            // 
+            btnVolver.CheckedState.ImageSize = new Size(64, 64);
+            btnVolver.HoverState.ImageSize = new Size(64, 64);
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.ImageOffset = new Point(0, 0);
+            btnVolver.ImageRotate = 0F;
+            btnVolver.Location = new Point(3, 2);
+            btnVolver.Name = "btnVolver";
+            btnVolver.PressedState.ImageSize = new Size(64, 64);
+            btnVolver.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnVolver.Size = new Size(35, 36);
+            btnVolver.TabIndex = 9;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmAgregarUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(cmbRol);
             Controls.Add(lblRol);
             Controls.Add(lblContraseña);
@@ -233,5 +256,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblContraseña;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRol;
         private Guna.UI2.WinForms.Guna2ComboBox cmbRol;
+        private Guna.UI2.WinForms.Guna2ImageButton btnVolver;
     }
 }
