@@ -127,11 +127,13 @@
             // 
             // btnBuscar
             // 
+            btnBuscar.Cursor = Cursors.Hand;
             btnBuscar.CustomizableEdges = customizableEdges3;
             btnBuscar.DisabledState.BorderColor = Color.DarkGray;
             btnBuscar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBuscar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBuscar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBuscar.FillColor = Color.FromArgb(100, 13, 95);
             btnBuscar.Font = new Font("Segoe UI", 9F);
             btnBuscar.ForeColor = Color.White;
             btnBuscar.Location = new Point(272, 343);
@@ -161,6 +163,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 178, 0);
             ClientSize = new Size(800, 420);
             Controls.Add(btnVolver);
             Controls.Add(btnBuscar);

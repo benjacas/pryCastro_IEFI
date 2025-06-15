@@ -79,5 +79,19 @@ namespace pryCastroIEFI
         {
             this.Close();
         }
+
+        private void dgvMostrar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Asegurarse de que no se hace clic en el encabezado
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvMostrar.Rows[e.RowIndex];
+
+                txtIdUsuario.Text = filaSeleccionada.Cells["Id"].Value.ToString();
+                txtNombreUsuario.Text = filaSeleccionada.Cells["Usuario"].Value.ToString();
+                cmbRol.Text = filaSeleccionada.Cells["Rol"].Value.ToString();
+               
+            }
+        }
     }
 }

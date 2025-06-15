@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
@@ -79,7 +79,7 @@
             // 
             btnCerrar.BorderRadius = 10;
             btnCerrar.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            btnCerrar.CustomizableEdges = customizableEdges1;
+            btnCerrar.CustomizableEdges = customizableEdges15;
             btnCerrar.DisabledState.BorderColor = Color.DarkGray;
             btnCerrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCerrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -89,7 +89,7 @@
             btnCerrar.ForeColor = Color.White;
             btnCerrar.Location = new Point(705, 12);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCerrar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnCerrar.Size = new Size(33, 27);
             btnCerrar.TabIndex = 12;
             btnCerrar.Text = "X";
@@ -97,12 +97,12 @@
             // 
             // picLogin
             // 
-            picLogin.CustomizableEdges = customizableEdges3;
+            picLogin.CustomizableEdges = customizableEdges17;
             picLogin.Image = pryCastroIEFI.Properties.Resources.fondo_naranja_login;
             picLogin.ImageRotate = 0F;
             picLogin.Location = new Point(-6, -1);
             picLogin.Name = "picLogin";
-            picLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            picLogin.ShadowDecoration.CustomizableEdges = customizableEdges18;
             picLogin.Size = new Size(317, 443);
             picLogin.TabIndex = 0;
             picLogin.TabStop = false;
@@ -112,7 +112,7 @@
             txtUsuario.Animated = true;
             txtUsuario.BorderRadius = 8;
             txtUsuario.Cursor = Cursors.IBeam;
-            txtUsuario.CustomizableEdges = customizableEdges9;
+            txtUsuario.CustomizableEdges = customizableEdges21;
             txtUsuario.DefaultText = "";
             txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -126,7 +126,7 @@
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de Usuario";
             txtUsuario.SelectedText = "";
-            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtUsuario.Size = new Size(200, 36);
             txtUsuario.TabIndex = 1;
             // 
@@ -135,7 +135,7 @@
             txtContraseña.Animated = true;
             txtContraseña.BorderRadius = 8;
             txtContraseña.Cursor = Cursors.IBeam;
-            txtContraseña.CustomizableEdges = customizableEdges7;
+            txtContraseña.CustomizableEdges = customizableEdges19;
             txtContraseña.DefaultText = "";
             txtContraseña.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtContraseña.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -148,7 +148,7 @@
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PlaceholderText = "Contraseña";
             txtContraseña.SelectedText = "";
-            txtContraseña.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtContraseña.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtContraseña.Size = new Size(200, 36);
             txtContraseña.TabIndex = 2;
             txtContraseña.UseSystemPasswordChar = true;
@@ -167,7 +167,8 @@
             // 
             btnIngresar.Animated = true;
             btnIngresar.AutoRoundedCorners = true;
-            btnIngresar.CustomizableEdges = customizableEdges5;
+            btnIngresar.Cursor = Cursors.Hand;
+            btnIngresar.CustomizableEdges = customizableEdges13;
             btnIngresar.DisabledState.BorderColor = Color.DarkGray;
             btnIngresar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnIngresar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -177,7 +178,7 @@
             btnIngresar.ForeColor = Color.White;
             btnIngresar.Location = new Point(9, 212);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnIngresar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnIngresar.Size = new Size(200, 45);
             btnIngresar.TabIndex = 3;
             btnIngresar.Text = "Ingresar";
@@ -189,10 +190,10 @@
             panelIngresar.Controls.Add(label3);
             panelIngresar.Controls.Add(txtContraseña);
             panelIngresar.Controls.Add(txtUsuario);
-            panelIngresar.CustomizableEdges = customizableEdges11;
+            panelIngresar.CustomizableEdges = customizableEdges23;
             panelIngresar.Location = new Point(463, 53);
             panelIngresar.Name = "panelIngresar";
-            panelIngresar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            panelIngresar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             panelIngresar.Size = new Size(219, 349);
             panelIngresar.TabIndex = 10;
             // 
@@ -202,6 +203,7 @@
             // 
             // frmLogin
             // 
+            AcceptButton = btnIngresar;
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(750, 442);

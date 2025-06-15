@@ -42,8 +42,7 @@ namespace pryCastroIEFI
                 dgvMostrar.Columns.Add("col", columnas);
             }
 
-            dtFecha.MaxDate = DateTime.Now;
-
+            dtFecha.MaxDate = DateTime.Now; 
 
             clsUsuarios Usuarios = new clsUsuarios();
             string nombreUsuario = UsuarioLogin.Usuario;
@@ -87,12 +86,16 @@ namespace pryCastroIEFI
         {
             frmAgregarTarea abrirTarea = new frmAgregarTarea();
             abrirTarea.ShowDialog();
+
+            cargaTareaLugares.CargarNombresDeTarea(cmbTarea);
         }
 
         private void btnAgregarLugar_Click(object sender, EventArgs e)
         {
             frmAgregarLugar abrirLugar = new frmAgregarLugar();
             abrirLugar.ShowDialog();
+
+            cargaTareaLugares.CargarNombresDeLugares(cmbLugar);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -138,9 +141,11 @@ namespace pryCastroIEFI
             }
 
             nuevaTarea.GuardarDetallesYAsignar(uniforme, licencia, reclamo, comentario);
+
+
+            panelTarea.Visible = true;
+
         }
-
-
 
         private void btnGuardarTareas_Click(object sender, EventArgs e)
         {
@@ -148,6 +153,15 @@ namespace pryCastroIEFI
 
             nuevaTarea.AgregarTarea(tareasCargadas);
             tareasCargadas.Clear();
+
+            dgvMostrar.ClearSelection();
+            txtComentario.Text="";
+            cmbLugar.SelectedIndex = -1;
+            cmbTarea.SelectedIndex = -1;
+
+
+            panelTarea.Visible = false;
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

@@ -50,12 +50,12 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvMostrar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvMostrar.ColumnHeadersHeight = 4;
+            dgvMostrar.ColumnHeadersHeight = 20;
             dgvMostrar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ActiveCaptionText;
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
@@ -80,7 +80,7 @@
             dgvMostrar.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             dgvMostrar.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvMostrar.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvMostrar.ThemeStyle.HeaderStyle.Height = 4;
+            dgvMostrar.ThemeStyle.HeaderStyle.Height = 20;
             dgvMostrar.ThemeStyle.ReadOnly = true;
             dgvMostrar.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvMostrar.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -93,6 +93,7 @@
             // btnVolver
             // 
             btnVolver.CheckedState.ImageSize = new Size(64, 64);
+            btnVolver.Cursor = Cursors.Hand;
             btnVolver.HoverState.ImageSize = new Size(64, 64);
             btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
             btnVolver.ImageOffset = new Point(0, 0);
@@ -109,9 +110,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(255, 178, 0);
+            ClientSize = new Size(812, 450);
             Controls.Add(btnVolver);
             Controls.Add(dgvMostrar);
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "frmAuditoria";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Auditoria";

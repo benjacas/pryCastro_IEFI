@@ -107,11 +107,13 @@
             // 
             // btnAgregar
             // 
+            btnAgregar.Cursor = Cursors.Hand;
             btnAgregar.CustomizableEdges = customizableEdges1;
             btnAgregar.DisabledState.BorderColor = Color.DarkGray;
             btnAgregar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAgregar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregar.FillColor = Color.FromArgb(100, 13, 95);
             btnAgregar.Font = new Font("Segoe UI", 9F);
             btnAgregar.ForeColor = Color.White;
             btnAgregar.Location = new Point(53, 400);
@@ -131,12 +133,13 @@
             txtNombreUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtNombreUsuario.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtNombreUsuario.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtNombreUsuario.FillColor = Color.Silver;
             txtNombreUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNombreUsuario.Font = new Font("Segoe UI", 9F);
+            txtNombreUsuario.ForeColor = Color.White;
             txtNombreUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNombreUsuario.Location = new Point(53, 358);
             txtNombreUsuario.Name = "txtNombreUsuario";
+            txtNombreUsuario.PlaceholderForeColor = Color.White;
             txtNombreUsuario.PlaceholderText = "";
             txtNombreUsuario.SelectedText = "";
             txtNombreUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -151,7 +154,6 @@
             txtContraseña.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtContraseña.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtContraseña.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtContraseña.FillColor = Color.Silver;
             txtContraseña.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtContraseña.Font = new Font("Segoe UI", 9F);
             txtContraseña.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -196,7 +198,6 @@
             cmbRol.CustomizableEdges = customizableEdges7;
             cmbRol.DrawMode = DrawMode.OwnerDrawFixed;
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRol.FillColor = Color.Silver;
             cmbRol.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbRol.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbRol.Font = new Font("Segoe UI", 10F);
@@ -227,6 +228,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 178, 0);
             ClientSize = new Size(800, 450);
             Controls.Add(btnVolver);
             Controls.Add(cmbRol);

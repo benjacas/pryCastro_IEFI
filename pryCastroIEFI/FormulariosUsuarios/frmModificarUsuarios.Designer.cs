@@ -108,6 +108,7 @@
             dgvMostrar.ThemeStyle.RowsStyle.Height = 25;
             dgvMostrar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvMostrar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvMostrar.CellClick += dgvMostrar_CellClick;
             // 
             // cmbRol
             // 
@@ -193,11 +194,13 @@
             // 
             // btnModificar
             // 
+            btnModificar.Cursor = Cursors.Hand;
             btnModificar.CustomizableEdges = customizableEdges7;
             btnModificar.DisabledState.BorderColor = Color.DarkGray;
             btnModificar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnModificar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnModificar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnModificar.FillColor = Color.FromArgb(100, 13, 95);
             btnModificar.Font = new Font("Segoe UI", 9F);
             btnModificar.ForeColor = Color.White;
             btnModificar.Location = new Point(56, 393);
@@ -255,6 +258,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 178, 0);
             ClientSize = new Size(800, 450);
             Controls.Add(btnVolver);
             Controls.Add(lblIDUsuario);

@@ -48,9 +48,9 @@ namespace pryGestionInventario2
                     
                     MessageBox.Show("Bienvenido " + usuarioActual);
                     
-                    frmMenu v = new frmMenu(Auditoria,Usuarios);
-                    
-                    v.ShowDialog();
+                    frmPrincipal abrirPrincipal = new frmPrincipal(Auditoria,Usuarios);
+
+                    abrirPrincipal.ShowDialog();
                     
                 }
                 else

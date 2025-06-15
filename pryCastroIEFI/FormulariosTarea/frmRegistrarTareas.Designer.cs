@@ -36,14 +36,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -52,6 +52,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarTareas));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblFecha = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblLugar = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTarea = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,6 +66,7 @@
             dtFecha = new DateTimePicker();
             grpAgregar = new Guna.UI2.WinForms.Guna2GroupBox();
             btnAgregarLugar = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnGuardarTareas = new Guna.UI2.WinForms.Guna2Button();
             btnAgregarTarea = new Guna.UI2.WinForms.Guna2CircleButton();
             btnMostrar = new Guna.UI2.WinForms.Guna2Button();
             btnAgregarDetalles = new Guna.UI2.WinForms.Guna2Button();
@@ -76,11 +81,14 @@
             lblLicencia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblReclamo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblUniforme = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnGuardarTareas = new Guna.UI2.WinForms.Guna2Button();
             btnVolver = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelDetalles = new Guna.UI2.WinForms.Guna2Panel();
+            panelTarea = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)dgvMostrar).BeginInit();
             grpAgregar.SuspendLayout();
             grpDetalles.SuspendLayout();
+            panelDetalles.SuspendLayout();
+            panelTarea.SuspendLayout();
             SuspendLayout();
             // 
             // lblFecha
@@ -113,7 +121,7 @@
             // lblComentario
             // 
             lblComentario.BackColor = Color.Transparent;
-            lblComentario.Location = new Point(24, 237);
+            lblComentario.Location = new Point(24, 234);
             lblComentario.Name = "lblComentario";
             lblComentario.Size = new Size(66, 17);
             lblComentario.TabIndex = 4;
@@ -226,6 +234,7 @@
             // grpAgregar
             // 
             grpAgregar.Controls.Add(btnAgregarLugar);
+            grpAgregar.Controls.Add(btnGuardarTareas);
             grpAgregar.Controls.Add(btnAgregarTarea);
             grpAgregar.Controls.Add(btnMostrar);
             grpAgregar.Controls.Add(cmbLugar);
@@ -235,22 +244,24 @@
             grpAgregar.Controls.Add(lblLugar);
             grpAgregar.Controls.Add(cmbTarea);
             grpAgregar.Controls.Add(lblTarea);
-            grpAgregar.CustomizableEdges = customizableEdges9;
+            grpAgregar.CustomizableEdges = customizableEdges11;
             grpAgregar.Font = new Font("Segoe UI", 9F);
             grpAgregar.ForeColor = Color.FromArgb(125, 137, 149);
-            grpAgregar.Location = new Point(60, 26);
+            grpAgregar.Location = new Point(6, 11);
             grpAgregar.Name = "grpAgregar";
-            grpAgregar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            grpAgregar.Size = new Size(396, 412);
+            grpAgregar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            grpAgregar.Size = new Size(396, 476);
             grpAgregar.TabIndex = 11;
             grpAgregar.Text = "Agregar Tarea";
             // 
             // btnAgregarLugar
             // 
+            btnAgregarLugar.BackColor = Color.White;
             btnAgregarLugar.DisabledState.BorderColor = Color.DarkGray;
             btnAgregarLugar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregarLugar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAgregarLugar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregarLugar.FillColor = Color.FromArgb(100, 13, 95);
             btnAgregarLugar.Font = new Font("Segoe UI", 9F);
             btnAgregarLugar.ForeColor = Color.White;
             btnAgregarLugar.Location = new Point(288, 160);
@@ -262,17 +273,37 @@
             btnAgregarLugar.Text = "+";
             btnAgregarLugar.Click += btnAgregarLugar_Click;
             // 
+            // btnGuardarTareas
+            // 
+            btnGuardarTareas.CustomizableEdges = customizableEdges6;
+            btnGuardarTareas.DisabledState.BorderColor = Color.DarkGray;
+            btnGuardarTareas.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGuardarTareas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGuardarTareas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGuardarTareas.FillColor = Color.FromArgb(100, 13, 95);
+            btnGuardarTareas.Font = new Font("Segoe UI", 9F);
+            btnGuardarTareas.ForeColor = Color.White;
+            btnGuardarTareas.Location = new Point(8, 417);
+            btnGuardarTareas.Name = "btnGuardarTareas";
+            btnGuardarTareas.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            btnGuardarTareas.Size = new Size(373, 40);
+            btnGuardarTareas.TabIndex = 17;
+            btnGuardarTareas.Text = "Guardar Tareas";
+            btnGuardarTareas.Click += btnGuardarTareas_Click;
+            // 
             // btnAgregarTarea
             // 
+            btnAgregarTarea.BackColor = Color.White;
             btnAgregarTarea.DisabledState.BorderColor = Color.DarkGray;
             btnAgregarTarea.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregarTarea.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAgregarTarea.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregarTarea.FillColor = Color.FromArgb(100, 13, 95);
             btnAgregarTarea.Font = new Font("Segoe UI", 9F);
             btnAgregarTarea.ForeColor = Color.White;
             btnAgregarTarea.Location = new Point(288, 101);
             btnAgregarTarea.Name = "btnAgregarTarea";
-            btnAgregarTarea.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAgregarTarea.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAgregarTarea.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnAgregarTarea.Size = new Size(30, 27);
             btnAgregarTarea.TabIndex = 11;
@@ -281,16 +312,17 @@
             // 
             // btnMostrar
             // 
-            btnMostrar.CustomizableEdges = customizableEdges7;
+            btnMostrar.CustomizableEdges = customizableEdges9;
             btnMostrar.DisabledState.BorderColor = Color.DarkGray;
             btnMostrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMostrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnMostrar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMostrar.FillColor = Color.FromArgb(100, 13, 95);
             btnMostrar.Font = new Font("Segoe UI", 9F);
             btnMostrar.ForeColor = Color.White;
             btnMostrar.Location = new Point(48, 202);
             btnMostrar.Name = "btnMostrar";
-            btnMostrar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnMostrar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnMostrar.Size = new Size(234, 40);
             btnMostrar.TabIndex = 12;
             btnMostrar.Text = "Mostrar en la Grilla";
@@ -298,16 +330,17 @@
             // 
             // btnAgregarDetalles
             // 
-            btnAgregarDetalles.CustomizableEdges = customizableEdges11;
+            btnAgregarDetalles.CustomizableEdges = customizableEdges13;
             btnAgregarDetalles.DisabledState.BorderColor = Color.DarkGray;
             btnAgregarDetalles.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregarDetalles.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAgregarDetalles.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregarDetalles.FillColor = Color.FromArgb(100, 13, 95);
             btnAgregarDetalles.Font = new Font("Segoe UI", 9F);
             btnAgregarDetalles.ForeColor = Color.White;
-            btnAgregarDetalles.Location = new Point(158, 372);
+            btnAgregarDetalles.Location = new Point(158, 404);
             btnAgregarDetalles.Name = "btnAgregarDetalles";
-            btnAgregarDetalles.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnAgregarDetalles.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnAgregarDetalles.Size = new Size(123, 24);
             btnAgregarDetalles.TabIndex = 13;
             btnAgregarDetalles.Text = "Agregar Detalles";
@@ -315,16 +348,17 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.CustomizableEdges = customizableEdges13;
+            btnCancelar.CustomizableEdges = customizableEdges15;
             btnCancelar.DisabledState.BorderColor = Color.DarkGray;
             btnCancelar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancelar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCancelar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancelar.FillColor = Color.FromArgb(100, 13, 95);
             btnCancelar.Font = new Font("Segoe UI", 9F);
             btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(24, 372);
+            btnCancelar.Location = new Point(24, 404);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnCancelar.Size = new Size(128, 24);
             btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
@@ -332,10 +366,10 @@
             // 
             // txtComentario
             // 
-            txtComentario.Location = new Point(24, 260);
+            txtComentario.Location = new Point(24, 257);
             txtComentario.Multiline = true;
             txtComentario.Name = "txtComentario";
-            txtComentario.Size = new Size(257, 106);
+            txtComentario.Size = new Size(257, 141);
             txtComentario.TabIndex = 15;
             // 
             // grpDetalles
@@ -352,19 +386,20 @@
             grpDetalles.Controls.Add(btnCancelar);
             grpDetalles.Controls.Add(lblComentario);
             grpDetalles.Controls.Add(btnAgregarDetalles);
-            grpDetalles.CustomizableEdges = customizableEdges15;
+            grpDetalles.CustomizableEdges = customizableEdges17;
             grpDetalles.Font = new Font("Segoe UI", 9F);
             grpDetalles.ForeColor = Color.FromArgb(125, 137, 149);
-            grpDetalles.Location = new Point(477, 26);
+            grpDetalles.Location = new Point(3, 6);
             grpDetalles.Name = "grpDetalles";
-            grpDetalles.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            grpDetalles.Size = new Size(300, 412);
+            grpDetalles.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            grpDetalles.Size = new Size(300, 476);
             grpDetalles.TabIndex = 16;
             grpDetalles.Text = "Agregar Detalles";
             // 
             // chkEstudio
             // 
             chkEstudio.AutoSize = true;
+            chkEstudio.BackColor = Color.White;
             chkEstudio.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             chkEstudio.CheckedState.BorderRadius = 0;
             chkEstudio.CheckedState.BorderThickness = 0;
@@ -378,10 +413,12 @@
             chkEstudio.UncheckedState.BorderRadius = 0;
             chkEstudio.UncheckedState.BorderThickness = 0;
             chkEstudio.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            chkEstudio.UseVisualStyleBackColor = false;
             // 
             // chkVacacion
             // 
             chkVacacion.AutoSize = true;
+            chkVacacion.BackColor = Color.White;
             chkVacacion.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             chkVacacion.CheckedState.BorderRadius = 0;
             chkVacacion.CheckedState.BorderThickness = 0;
@@ -395,10 +432,12 @@
             chkVacacion.UncheckedState.BorderRadius = 0;
             chkVacacion.UncheckedState.BorderThickness = 0;
             chkVacacion.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            chkVacacion.UseVisualStyleBackColor = false;
             // 
             // chkSalario
             // 
             chkSalario.AutoSize = true;
+            chkSalario.BackColor = Color.White;
             chkSalario.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             chkSalario.CheckedState.BorderRadius = 0;
             chkSalario.CheckedState.BorderThickness = 0;
@@ -412,10 +451,12 @@
             chkSalario.UncheckedState.BorderRadius = 0;
             chkSalario.UncheckedState.BorderThickness = 0;
             chkSalario.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            chkSalario.UseVisualStyleBackColor = false;
             // 
             // chkRecibo
             // 
             chkRecibo.AutoSize = true;
+            chkRecibo.BackColor = Color.White;
             chkRecibo.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             chkRecibo.CheckedState.BorderRadius = 0;
             chkRecibo.CheckedState.BorderThickness = 0;
@@ -429,10 +470,12 @@
             chkRecibo.UncheckedState.BorderRadius = 0;
             chkRecibo.UncheckedState.BorderThickness = 0;
             chkRecibo.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            chkRecibo.UseVisualStyleBackColor = false;
             // 
             // chkInsumo
             // 
             chkInsumo.AutoSize = true;
+            chkInsumo.BackColor = Color.White;
             chkInsumo.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             chkInsumo.CheckedState.BorderRadius = 0;
             chkInsumo.CheckedState.BorderThickness = 0;
@@ -446,6 +489,7 @@
             chkInsumo.UncheckedState.BorderRadius = 0;
             chkInsumo.UncheckedState.BorderThickness = 0;
             chkInsumo.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            chkInsumo.UseVisualStyleBackColor = false;
             // 
             // lblLicencia
             // 
@@ -474,23 +518,6 @@
             lblUniforme.TabIndex = 17;
             lblUniforme.Text = "Uniforme";
             // 
-            // btnGuardarTareas
-            // 
-            btnGuardarTareas.CustomizableEdges = customizableEdges17;
-            btnGuardarTareas.DisabledState.BorderColor = Color.DarkGray;
-            btnGuardarTareas.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnGuardarTareas.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnGuardarTareas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnGuardarTareas.Font = new Font("Segoe UI", 9F);
-            btnGuardarTareas.ForeColor = Color.White;
-            btnGuardarTareas.Location = new Point(60, 444);
-            btnGuardarTareas.Name = "btnGuardarTareas";
-            btnGuardarTareas.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnGuardarTareas.Size = new Size(396, 40);
-            btnGuardarTareas.TabIndex = 17;
-            btnGuardarTareas.Text = "Guardar Tareas";
-            btnGuardarTareas.Click += btnGuardarTareas_Click;
-            // 
             // btnVolver
             // 
             btnVolver.CheckedState.ImageSize = new Size(64, 64);
@@ -506,16 +533,36 @@
             btnVolver.TabIndex = 18;
             btnVolver.Click += btnVolver_Click;
             // 
+            // panelDetalles
+            // 
+            panelDetalles.Controls.Add(grpDetalles);
+            panelDetalles.CustomizableEdges = customizableEdges20;
+            panelDetalles.Location = new Point(56, 15);
+            panelDetalles.Name = "panelDetalles";
+            panelDetalles.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            panelDetalles.Size = new Size(299, 476);
+            panelDetalles.TabIndex = 19;
+            // 
+            // panelTarea
+            // 
+            panelTarea.Controls.Add(grpAgregar);
+            panelTarea.CustomizableEdges = customizableEdges22;
+            panelTarea.Location = new Point(56, 12);
+            panelTarea.Name = "panelTarea";
+            panelTarea.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            panelTarea.Size = new Size(413, 487);
+            panelTarea.TabIndex = 20;
+            // 
             // frmRegistrarTareas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 506);
+            BackColor = Color.FromArgb(255, 178, 0);
+            ClientSize = new Size(502, 506);
             ControlBox = false;
+            Controls.Add(panelTarea);
+            Controls.Add(panelDetalles);
             Controls.Add(btnVolver);
-            Controls.Add(btnGuardarTareas);
-            Controls.Add(grpDetalles);
-            Controls.Add(grpAgregar);
             Name = "frmRegistrarTareas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrar Tareas";
@@ -525,6 +572,8 @@
             grpAgregar.PerformLayout();
             grpDetalles.ResumeLayout(false);
             grpDetalles.PerformLayout();
+            panelDetalles.ResumeLayout(false);
+            panelTarea.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -556,5 +605,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox chkRecibo;
         private Guna.UI2.WinForms.Guna2Button btnGuardarTareas;
         private Guna.UI2.WinForms.Guna2ImageButton btnVolver;
+        private Guna.UI2.WinForms.Guna2Panel panelDetalles;
+        private Guna.UI2.WinForms.Guna2Panel panelTarea;
     }
 }

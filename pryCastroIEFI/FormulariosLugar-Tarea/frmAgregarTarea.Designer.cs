@@ -1,6 +1,6 @@
 ﻿namespace pryCastroIEFI
 {
-    partial class frmAgregarLugar
+    partial class frmAgregarTarea
     {
         /// <summary>
         /// Required designer variable.
@@ -34,83 +34,86 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            txtLugar = new Guna.UI2.WinForms.Guna2TextBox();
-            btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             btnCancelar = new Guna.UI2.WinForms.Guna2Button();
+            btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            txtTarea = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
-            // txtLugar
+            // btnCancelar
             // 
-            txtLugar.CustomizableEdges = customizableEdges1;
-            txtLugar.DefaultText = "";
-            txtLugar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtLugar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtLugar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtLugar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtLugar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLugar.Font = new Font("Segoe UI", 9F);
-            txtLugar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLugar.Location = new Point(12, 12);
-            txtLugar.Name = "txtLugar";
-            txtLugar.PlaceholderText = "";
-            txtLugar.SelectedText = "";
-            txtLugar.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtLugar.Size = new Size(214, 34);
-            txtLugar.TabIndex = 6;
+            btnCancelar.Cursor = Cursors.Hand;
+            btnCancelar.CustomizableEdges = customizableEdges1;
+            btnCancelar.DisabledState.BorderColor = Color.DarkGray;
+            btnCancelar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancelar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancelar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancelar.FillColor = Color.FromArgb(100, 13, 95);
+            btnCancelar.Font = new Font("Segoe UI", 9F);
+            btnCancelar.ForeColor = Color.White;
+            btnCancelar.Location = new Point(12, 52);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCancelar.Size = new Size(104, 22);
+            btnCancelar.TabIndex = 1;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAgregar
             // 
+            btnAgregar.Cursor = Cursors.Hand;
             btnAgregar.CustomizableEdges = customizableEdges3;
             btnAgregar.DisabledState.BorderColor = Color.DarkGray;
             btnAgregar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgregar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAgregar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgregar.FillColor = Color.FromArgb(100, 13, 95);
             btnAgregar.Font = new Font("Segoe UI", 9F);
             btnAgregar.ForeColor = Color.White;
             btnAgregar.Location = new Point(122, 52);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnAgregar.Size = new Size(104, 22);
-            btnAgregar.TabIndex = 5;
+            btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Agregar";
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // btnCancelar
+            // txtTarea
             // 
-            btnCancelar.CustomizableEdges = customizableEdges5;
-            btnCancelar.DisabledState.BorderColor = Color.DarkGray;
-            btnCancelar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCancelar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCancelar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCancelar.Font = new Font("Segoe UI", 9F);
-            btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(12, 52);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnCancelar.Size = new Size(104, 22);
-            btnCancelar.TabIndex = 4;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.Click += btnCancelar_Click;
+            txtTarea.CustomizableEdges = customizableEdges5;
+            txtTarea.DefaultText = "";
+            txtTarea.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtTarea.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtTarea.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtTarea.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTarea.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTarea.Font = new Font("Segoe UI", 9F);
+            txtTarea.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTarea.Location = new Point(12, 12);
+            txtTarea.Name = "txtTarea";
+            txtTarea.PlaceholderText = "";
+            txtTarea.SelectedText = "";
+            txtTarea.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtTarea.Size = new Size(214, 34);
+            txtTarea.TabIndex = 3;
             // 
-            // frmAgregarLugar
+            // frmAgregarTarea
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(240, 85);
+            ClientSize = new Size(236, 86);
             ControlBox = false;
-            Controls.Add(txtLugar);
+            Controls.Add(txtTarea);
             Controls.Add(btnAgregar);
             Controls.Add(btnCancelar);
-            Name = "frmAgregarLugar";
+            Name = "frmAgregarTarea";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Agregar Lugar";
+            Text = "Agregar Tarea";
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2TextBox txtLugar;
-        private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2TextBox txtTarea;
     }
 }
